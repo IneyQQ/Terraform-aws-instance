@@ -20,7 +20,9 @@ variable type {
   default = "t2.micro"
 }
 variable subnet_id {}
-variable key_name {}
+variable key_name {
+  default = ""
+}
 variable vpc_security_group_ids {
   type = list(string)
 }
