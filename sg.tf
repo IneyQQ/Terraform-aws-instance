@@ -22,11 +22,13 @@ resource aws_security_group_rule additional_tcp_ingress_ports_from_vpc_cidr {
   security_group_id    = aws_security_group.additional[0].id
 }
 
+/*
 resource aws_network_interface_sg_attachment additional {
   count                = local.create_additional_sg ? 1 : 0
   security_group_id    = aws_security_group.additional[0].id
   network_interface_id = aws_instance.main.primary_network_interface_id
 }
+*/
 
 data aws_security_group lb {
   count                    = local.create_public_access ? 1 : 0
